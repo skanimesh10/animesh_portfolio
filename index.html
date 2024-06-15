@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Animesh's Portfolio</title>
+  </head>
+
+  <body>
+    <div class="card">
+      <svg
+        viewBox="0 0 100% 100%"
+        xmlns="http://www.w3.org/2000/svg"
+        class="noise"
+      >
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.85"
+            numOctaves="6"
+            stitchTiles="stitch"
+          />
+        </filter>
+
+        <rect
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#noiseFilter)"
+        />
+      </svg>
+      <div class="content">
+        <img src="assets/avatar.jpeg" alt="Animesh" class="avatar" />
+
+        <div class="name-and-descriptiom">
+          <h1>Animesh Swain</h1>
+          <p>Pythonista</p>
+          <p>I build awesome web applications.</p>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/your-username" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/your-username" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://twitter.com/your-username" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://reddit.com/in/your-username" target="_blank"
+            ><i class="fab fa-reddit"></i
+          ></a>
+          <a href="https://instagram.com/in/your-username" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- Add more social links as needed -->
+        </div>
+        <div class="python-logo">
+          <img src="assets/python.webp" alt="Python Logo" />
+        </div>
+      </div>
+    </div>
+    <div class="gradient-bg">
+      <svg
+        viewBox="0 0 100vw 100vw"
+        xmlns="http://www.w3.org/2000/svg"
+        class="noiseBg"
+      >
+        <filter id="noiseFilterBg">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.6"
+            stitchTiles="stitch"
+          />
+        </filter>
+
+        <rect
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#noiseFilterBg)"
+        />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

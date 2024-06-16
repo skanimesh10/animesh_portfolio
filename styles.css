@@ -55,7 +55,7 @@ h3 {
   backdrop-filter: blur(10px);
   border-radius: 8px;
   box-shadow: 0 4px 90px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: visible;
 
   &:before {
     content: "";
@@ -102,8 +102,15 @@ h3 {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: -7rem;
+    position: relative;
+    top: -125px;
+    transition: transform 0.5s ease;
   }
+  .avatar:hover {
+    transform: rotateY(180deg);
+  }
+
   .name-and-description {
     margin-bottom: 2rem;
   }
@@ -117,6 +124,10 @@ h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: center;
+  }
+  .underline {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
   }
 
   .social-links {
